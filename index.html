@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waylogy</title>
+
+    <link rel="stylesheet" href="css/swiper-bundle.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="wrapper">
+            <div class="logo">
+                <svg width="186" height="32" viewBox="0 0 186 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.3975 8.86267L14.1648 31.2493C14.0679 31.7579 13.7653 32 13.2688 32H4.98735C4.47884 32 4.18826 31.7458 4.0914 31.2493L0.0232961 1.31972C-0.0735635 0.81121 0.132263 0.569061 0.628669 0.569061H6.51289C7.0214 0.569061 7.31198 0.823318 7.39674 1.31972L10.1451 25.2562L13.2931 1.31972C13.3778 0.81121 13.6684 0.569061 14.1769 0.569061H20.6302C21.1387 0.569061 21.4293 0.823318 21.514 1.31972L24.662 25.2562L27.4104 1.31972C27.4951 0.81121 27.7857 0.569061 28.2942 0.569061H34.1784C34.6869 0.569061 34.8807 0.823318 34.7838 1.31972L30.7157 31.2493C30.6188 31.7579 30.3161 32 29.8197 32H21.5382C21.0297 32 20.7391 31.7458 20.6423 31.2493L17.3975 8.86267Z"
+                          fill="white"/>
+                    <path d="M45.5716 24.566L44.5061 31.2493C44.4214 31.7579 44.1308 32 43.6223 32H37.3143C36.8058 32 36.6121 31.7458 36.7089 31.2493L42.4479 1.31972C42.5447 0.81121 42.8474 0.569061 43.3438 0.569061H53.4414C53.9499 0.569061 54.2405 0.823318 54.3374 1.31972L60.0763 31.2493C60.1732 31.7579 59.9673 32 59.4709 32H53.1629C52.6544 32 52.3639 31.7458 52.2791 31.2493L51.2136 24.566H45.5716ZM48.3926 7.31291L46.516 18.8029H50.2935L48.3926 7.31291Z"
+                          fill="white"/>
+                    <path d="M76.3851 18.0038V31.2493C76.3851 31.7579 76.1429 32 75.6465 32H69.5928C69.0843 32 68.8421 31.7458 68.8421 31.2493V18.0038L59.3136 1.31972C59.023 0.81121 59.1198 0.569061 59.6284 0.569061H66.6265C67.135 0.569061 67.5224 0.823318 67.8009 1.31972L72.6075 9.74651L77.4021 1.31972C77.6806 0.81121 78.068 0.569061 78.5765 0.569061H85.5746C86.0831 0.569061 86.18 0.823318 85.8894 1.31972L76.3851 18.0038Z"
+                          fill="white"/>
+                    <path d="M90.5506 29.9296C89.1704 28.5494 88.4802 26.8786 88.4802 24.9171V1.31972C88.4802 0.81121 88.6982 0.569061 89.134 0.569061H95.2725C95.781 0.569061 96.0232 0.823318 96.0232 1.31972V24.9656C96.0232 25.4741 96.2774 25.7162 96.7738 25.7162H110.153C110.661 25.7162 110.903 25.9705 110.903 26.4669V31.2493C110.903 31.7579 110.649 32 110.153 32H95.5631C93.6017 32 91.9309 31.3099 90.5506 29.9296Z"
+                          fill="white"/>
+                    <path d="M142.891 32C140.93 32 139.259 31.3099 137.879 29.9296C136.498 28.5494 135.808 26.8786 135.808 24.9172V7.63982C135.808 5.67841 136.498 4.01969 137.879 2.62734C139.259 1.24709 140.93 0.556961 142.891 0.556961H154.648C155.156 0.556961 155.398 0.811218 155.398 1.30762V6.09007C155.398 6.59858 155.144 6.84073 154.648 6.84073H143.848C143.509 6.84073 143.339 7.01023 143.339 7.34924V25.2077C143.339 25.5467 143.509 25.7162 143.848 25.7162H148.267C148.691 25.7162 148.897 25.5467 148.897 25.2077V15.1464C148.897 14.6379 149.151 14.3958 149.647 14.3958H155.689C156.197 14.3958 156.439 14.65 156.439 15.1464V31.2494C156.439 31.7579 156.185 32 155.689 32H142.891Z"
+                          fill="white"/>
+                    <path d="M176.102 18.0038V31.2493C176.102 31.7579 175.86 32 175.363 32H169.31C168.801 32 168.559 31.7458 168.559 31.2493V18.0038L159.043 1.31972C158.752 0.81121 158.849 0.569061 159.357 0.569061H166.355C166.864 0.569061 167.251 0.823318 167.53 1.31972L172.324 9.74651L177.119 1.31972C177.397 0.81121 177.785 0.569061 178.293 0.569061H185.292C185.8 0.569061 185.897 0.823318 185.606 1.31972L176.102 18.0038Z"
+                          fill="white"/>
+                    <path d="M118.567 31.4431L111.303 18.6939C111.073 18.3065 111.158 18.1127 111.545 18.1127H116.897C117.284 18.1127 117.575 18.3065 117.793 18.6939L121.267 25.1351L124.936 18.6939C125.348 18.3065 125.65 18.1127 126.026 18.1127H131.377C131.765 18.1127 131.837 18.3065 131.619 18.6939L124.355 31.4431"
+                          fill="#3F65AD"/>
+                    <path d="M124.137 0L131.401 12.7491C131.631 13.1366 131.547 13.3303 131.159 13.3303H125.808C125.42 13.3303 125.13 13.1366 124.912 12.7491L121.243 6.30798L117.587 12.7491C117.369 13.1366 117.078 13.3303 116.691 13.3303H111.339C110.952 13.3303 110.879 13.1366 111.097 12.7491L118.362 0"
+                          fill="#3F65AD"/>
+                </svg>
+            </div>
+            <ul class="navigation">
+                <li class="navigation__item"><a href="#about">We Are</a></li>
+                <li class="navigation__item"><a href="#projects">Projects</a></li>
+                <li class="navigation__item"><a href="#testimonials">Testimonials</a></li>
+                <li class="navigation__item"><a href="#team">Team</a></li>
+                <li class="navigation__item"><a href="#contactUs">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<section class="bring">
+    <div class="container">
+        <div class="wrapper-blocks">
+            <div class="bring-w">
+                <svg width="449" height="319" viewBox="0 0 449 319" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M447.486 1.11897L447.637 0.5H447H376.486H376.09L375.999 0.885373L323.12 225.402L269.296 0.883437L269.204 0.5H268.809H181.62H181.227L181.134 0.881506L126.359 225.429L73.0004 0.884404L72.909 0.5H72.5139H2H1.36179L1.51453 1.11966L79.6516 318.12L79.7453 318.5H80.137H171.138H171.539L171.626 318.109L224.974 79.4578L277.85 318.108L277.937 318.5H278.338H369.339H369.732L369.825 318.119L447.486 1.11897Z"
+                          stroke="url(#paint0_linear_134_333)"/>
+                    <defs>
+                        <linearGradient id="paint0_linear_134_333" x1="38" y1="160" x2="407" y2="167"
+                                        gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#21E1B3"/>
+                            <stop offset="0.590332" stop-color="#3F65AE"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+            </div>
+            <div class="block-text">
+                <h1 class="title">Bring Your <br>
+                    Ideas <br>
+                    Into Reality</h1>
+                <div class="btn">Let's start</div>
+            </div>
+
+            <div class="text-stroke text-stroke-vertical">Find your way</div>
+        </div>
+    </div>
+
+
+</section>
+
+<section class="block-about" id="about">
+    <div class="container">
+        <div class="bg-circle"></div>
+        <div class="about-bg">
+            <div class="about-text-wrapper">
+                <h2 class="about-title"><span class="text-green">We</span> Are</h2>
+                <p class="about-text">You don’t get 15x faster installation by making minor tweaks. We’ve re-engineered
+                    every element of steel framing for speed, safety, and quality.</p>
+                <p class="about-text">Our software transforms your BIM into a detailed manufacturing order ready for
+                    your PO. Then we build and batch your framing into kits, which are delivered to corresponding zones
+                    on your job site. Each piece snaps into place.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="projects" id="projects">
+    <div class="container">
+        <div class="projects-wrapper">
+            <div class="projects-title">
+                Projects <br> we <br> <span class="text-green">Made</span>
+            </div>
+            <div class="projects-list">
+                <div class="project" data-aos="fade-up"
+                     data-aos-offset="200"
+                     data-aos-delay="50"
+                     data-aos-easing="ease-in-out">
+                    <div class="project__type">Mobile App | <span class="text-blue">entertainment</span></div>
+                    <div class="project__name">Instagram</div>
+                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order
+                        ready for your PO. Then we
+                        build and batch your framing into kits, which are delivered to corresponding zones on your job
+                        site. Each piece snaps into place.</p>
+                </div>
+                <div class="project" data-aos="fade-up"
+                     data-aos-offset="200"
+                     data-aos-delay="50"
+                     data-aos-easing="ease-in-out">
+                    <div class="project__type">Mobile App | <span class="text-blue">finance</span></div>
+                    <div class="project__name">Rocket</div>
+                    <p class="project__description">You don’t get 15x faster installation by making minor tweaks. We’ve
+                        re-engineered every element of steel framing for speed, safety, and quality.</p>
+                </div>
+                <div class="project" data-aos="fade-up"
+                     data-aos-offset="100"
+                     data-aos-delay="50"
+                     data-aos-easing="ease-in-out">
+                    <div class="project__type">Mobile App | <span class="text-blue">trading</span></div>
+                    <div class="project__name">LTD App</div>
+                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order
+                        ready for your PO. Then we build and batch your framing into kits, which are delivered to
+                        corresponding zones on your job site. Each piece snaps into place.</p>
+                </div>
+                <div class="btn-view-more">View more</div>
+            </div>
+            <div class="arrows-top">
+                <img class="arrow-first" src="./img/arrows.png" alt="arrows">
+                <img src="./img/arrows.png" alt="arrows">
+            </div>
+            <div class="arrows-center">
+                <img class="arrow-first" src="./img/arrows-green.png" alt="arrows">
+                <img src="./img/arrows-green.png" alt="arrows">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h3 class="title">Testimonials</h3>
+
+        <div class="custom-swiper">
+            <div class="custom-swiper-wrapper">
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-custom-prev">
+                    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="45.5" cy="45.5" r="45.5" fill="white"/>
+                        <circle cx="46" cy="46" r="19.5" stroke="url(#paint0_linear_134_891)"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M50 40.645L44.4372 46L50 51.355L48.2874 53L41 46L48.2874 39L50 40.645Z"
+                              fill="#23DAB3"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_134_891" x1="33" y1="31" x2="59" y2="63"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#38599B"/>
+                                <stop offset="1" stop-color="#23DAB3"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <!-- Slider main container -->
+                <div class="swiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <div class="block-testimonials">
+                                <p class="comment">Great work! Together with these guys we made a coolest project ever.
+                                    Always on
+                                    touch, I have the feeling that they are my partners not just a development team.
+                                    <br>
+                                    Many thanks, wish to have future cooperation.</p>
+                                <div class="testimonial-author">
+                                    <img class="testimonial-author-image" src="img/person-1.png" alt="user-name">
+                                    <div class="testimonial-author__info">
+                                        <p class="testimonial-author__info-name">Oleksandra Koval</p>
+                                        <p class="testimonial-author__info-position">CTO BMP PLATFORM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-testimonials">
+                                <p class="comment">Great work! Together with these guys we made a coolest project ever.
+                                    Always on
+                                    touch, I have the feeling that they are my partners not just a development team.
+                                    <br>
+                                    Many thanks, wish to have future cooperation.</p>
+                                <div class="testimonial-author">
+                                    <img class="testimonial-author-image" src="img/person-1.png" alt="user-name">
+                                    <div class="testimonial-author__info">
+                                        <p class="testimonial-author__info-name">Oleksandra Koval 1</p>
+                                        <p class="testimonial-author__info-position">CTO BMP PLATFORM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-testimonials">
+                                <p class="comment">Great work! Together with these guys we made a coolest project ever.
+                                    Always on
+                                    touch, I have the feeling that they are my partners not just a development team.
+                                    <br>
+                                    Many thanks, wish to have future cooperation.</p>
+                                <div class="testimonial-author">
+                                    <img class="testimonial-author-image" src="img/person-1.png" alt="user-name">
+                                    <div class="testimonial-author__info">
+                                        <p class="testimonial-author__info-name">Oleksandra Koval 2</p>
+                                        <p class="testimonial-author__info-position">CTO BMP PLATFORM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="block-testimonials">
+                                <p class="comment">Great work! Together with these guys we made a coolest project ever.
+                                    Always on
+                                    touch, I have the feeling that they are my partners not just a development team.
+                                    <br>
+                                    Many thanks, wish to have future cooperation.</p>
+                                <div class="testimonial-author">
+                                    <img class="testimonial-author-image" src="img/person-1.png" alt="user-name">
+                                    <div class="testimonial-author__info">
+                                        <p class="testimonial-author__info-name">Oleksandra Koval 3</p>
+                                        <p class="testimonial-author__info-position">CTO BMP PLATFORM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-custom-next">
+                    <svg width="91" height="91" viewBox="0 0 91 91" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle opacity="0.05" cx="45.5" cy="45.5" r="45.5" fill="white"/>
+                        <circle cx="46" cy="46" r="19.5" stroke="url(#paint0_linear_134_893)"/>
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M42 51.355L47.5628 46L42 40.645L43.7126 39L51 46L43.7126 53L42 51.355Z"
+                              fill="#23DAB3"/>
+                        <defs>
+                            <linearGradient id="paint0_linear_134_893" x1="33" y1="31" x2="59" y2="63"
+                                            gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#38599B"/>
+                                <stop offset="1" stop-color="#23DAB3"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="our-team" id="team">
+    <div class="container">
+        <div class="top">
+            <h3 class="title">Meet our <span class="text-blue">team</span></h3>
+            <div class="text-stroke">we’ll make your product <br> awesome together</div>
+        </div>
+        <div class="team">
+            <div class="team__block">
+                <div class="team__item">
+                    <div class="circle"></div>
+                    <img class="team-image" src="./img/team-item-1.jpg" alt="Team">
+                </div>
+                <div class="team__info">
+                    <p class="team__info__name">Jack Heorhiian</p>
+                    <p class="team__info__position">CTO</p>
+                </div>
+            </div>
+            <div class="team__block">
+                <div class="team__item">
+                    <div class="circle"></div>
+                    <img class="team-image" src="./img/team-item-2.jpg" alt="Team">
+                </div>
+                <div class="team__info">
+                    <p class="team__info__name">Rostyslav Hetmaniuk</p>
+                    <p class="team__info__position">development manager</p>
+                </div>
+            </div>
+            <div class="team__block">
+                <div class="team__item">
+                    <div class="circle"></div>
+                    <img class="team-image" src="./img/team-item-3.jpg" alt="Team">
+                </div>
+                <div class="team__info">
+                    <p class="team__info__name">Sergiy Palagniuk</p>
+                    <p class="team__info__position">Project manager</p>
+                </div>
+            </div>
+        </div>
+        <div class="arrows-top">
+            <img class="arrow-first" src="./img/arrows.png" alt="arrows">
+            <img src="./img/arrows.png" alt="arrows">
+        </div>
+    </div>
+</section>
+
+<section class="form" id="contactUs">
+    <div class="container">
+        <div class="form-content">
+            <h3 class="form-title">We're waiting for you</h3>
+
+            <form class="form-wrapper">
+                <div class="form-group">
+                    <label for="username">Name</label>
+                    <input type="text" id="username" name="username" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required="required"/>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required="required"></textarea>
+                </div>
+
+                <button class="btn btn-form">Let's start</button>
+            </form>
+        </div>
+        <div class="arrows-top">
+            <img src="./img/arrows.png" alt="arrows">
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        <div class="wrapper">
+            <div class="logo">
+                <a href="#">
+                    <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.36514 4.77064L7.62497 16.8215C7.57283 17.0952 7.4099 17.2256 7.14268 17.2256H2.68471C2.41098 17.2256 2.25456 17.0887 2.20242 16.8215L0.0125404 0.710237C-0.0395995 0.436502 0.0711979 0.306152 0.338415 0.306152H3.50592C3.77965 0.306152 3.93607 0.44302 3.98169 0.710237L5.46116 13.5953L7.15571 0.710237C7.20134 0.436502 7.35776 0.306152 7.63149 0.306152H11.1053C11.379 0.306152 11.5355 0.44302 11.5811 0.710237L13.2756 13.5953L14.7551 0.710237C14.8007 0.436502 14.9572 0.306152 15.2309 0.306152H18.3984C18.6721 0.306152 18.7764 0.44302 18.7243 0.710237L16.5344 16.8215C16.4822 17.0952 16.3193 17.2256 16.0521 17.2256H11.5941C11.3204 17.2256 11.164 17.0887 11.1118 16.8215L9.36514 4.77064Z"
+                              fill="white"/>
+                        <path d="M24.5313 13.2238L23.9578 16.8215C23.9122 17.0952 23.7558 17.2256 23.482 17.2256H20.0864C19.8127 17.2256 19.7084 17.0887 19.7605 16.8215L22.8498 0.710237C22.902 0.436502 23.0649 0.306152 23.3321 0.306152H28.7677C29.0414 0.306152 29.1979 0.44302 29.25 0.710237L32.3393 16.8215C32.3914 17.0952 32.2806 17.2256 32.0134 17.2256H28.6178C28.3441 17.2256 28.1877 17.0887 28.142 16.8215L27.5685 13.2238H24.5313ZM26.0499 3.9364L25.0397 10.1215H27.0732L26.0499 3.9364Z"
+                              fill="white"/>
+                        <path d="M41.1185 9.69134V16.8215C41.1185 17.0952 40.9882 17.2256 40.721 17.2256H37.4622C37.1885 17.2256 37.0581 17.0887 37.0581 16.8215V9.69134L31.9289 0.710237C31.7724 0.436502 31.8246 0.306152 32.0983 0.306152H35.8654C36.1392 0.306152 36.3477 0.44302 36.4976 0.710237L39.0851 5.24641L41.666 0.710237C41.8159 0.436502 42.0245 0.306152 42.2982 0.306152H46.0653C46.339 0.306152 46.3912 0.44302 46.2348 0.710237L41.1185 9.69134Z"
+                              fill="white"/>
+                        <path d="M48.7439 16.1111C48.0009 15.3681 47.6294 14.4687 47.6294 13.4128V0.710237C47.6294 0.436502 47.7467 0.306152 47.9813 0.306152H51.2857C51.5594 0.306152 51.6898 0.44302 51.6898 0.710237V13.4389C51.6898 13.7126 51.8267 13.843 52.0939 13.843H59.2957C59.5694 13.843 59.6998 13.9799 59.6998 14.2471V16.8215C59.6998 17.0952 59.5629 17.2256 59.2957 17.2256H51.4421C50.3863 17.2256 49.4869 16.8541 48.7439 16.1111Z"
+                              fill="white"/>
+                        <path d="M76.9189 17.2257C75.8631 17.2257 74.9637 16.8542 74.2207 16.1112C73.4777 15.3682 73.1062 14.4688 73.1062 13.413V4.11254C73.1062 3.0567 73.4777 2.16381 74.2207 1.4143C74.9637 0.671302 75.8631 0.299805 76.9189 0.299805H83.2474C83.5212 0.299805 83.6515 0.436672 83.6515 0.703889V3.2783C83.6515 3.55203 83.5146 3.68238 83.2474 3.68238H77.4338C77.2513 3.68238 77.1601 3.77363 77.1601 3.95612V13.5694C77.1601 13.7519 77.2513 13.8432 77.4338 13.8432H79.8127C80.0408 13.8432 80.1516 13.7519 80.1516 13.5694V8.15338C80.1516 7.87965 80.2885 7.7493 80.5557 7.7493H83.8079C84.0817 7.7493 84.212 7.88617 84.212 8.15338V16.8216C84.212 17.0954 84.0751 17.2257 83.8079 17.2257H76.9189Z"
+                              fill="white"/>
+                        <path d="M94.7963 9.69134V16.8215C94.7963 17.0952 94.666 17.2256 94.3988 17.2256H91.14C90.8663 17.2256 90.7359 17.0887 90.7359 16.8215V9.69134L85.6132 0.710237C85.4568 0.436502 85.5089 0.306152 85.7826 0.306152H89.5498C89.8235 0.306152 90.032 0.44302 90.182 0.710237L92.7629 5.24641L95.3438 0.710237C95.4937 0.436502 95.7023 0.306152 95.976 0.306152H99.7431C100.017 0.306152 100.069 0.44302 99.9126 0.710237L94.7963 9.69134Z"
+                              fill="white"/>
+                        <path d="M63.8254 16.9262L59.9149 10.0633C59.791 9.85477 59.8367 9.75049 60.0452 9.75049H62.926C63.1345 9.75049 63.2909 9.85477 63.4082 10.0633L65.2788 13.5306L67.2536 10.0633C67.4752 9.85477 67.6381 9.75049 67.8401 9.75049H70.7209C70.9294 9.75049 70.9685 9.85477 70.8512 10.0633L66.9407 16.9262"
+                              fill="#3F65AD"/>
+                        <path d="M66.8234 0L70.7339 6.86292C70.8578 7.07148 70.8121 7.17576 70.6036 7.17576H67.7228C67.5143 7.17576 67.3579 7.07148 67.2405 6.86292L65.2657 3.39561L63.2975 6.86292C63.1801 7.07148 63.0237 7.17576 62.8152 7.17576H59.9344C59.7259 7.17576 59.6868 7.07148 59.8041 6.86292L63.7146 0"
+                              fill="#3F65AD"/>
+                    </svg>
+                </a>
+            </div>
+            <ul class="navigation">
+                <li class="navigation__item"><a href="#about">We Are</a></li>
+                <li class="navigation__item"><a href="#projects">Projects</a></li>
+                <li class="navigation__item"><a href="#testimonials">Testimonials</a></li>
+                <li class="navigation__item"><a href="#team">Team</a></li>
+                <li class="navigation__item"><a href="#contactUs">Contact Us</a></li>
+            </ul>
+            <div class="socials">
+                <div class="socials__item">
+                    <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.03125 14H2.5625V7.62441H0.5V5.12676H2.5625V3.28639C2.5625 2.23474 2.84375 1.4241 3.40625 0.85446C3.96875 0.28482 4.71875 0 5.65625 0C6.40625 0 7.02083 0.0328638 7.5 0.0985916V2.30047L6.21875 2.33333C5.76042 2.33333 5.44792 2.43192 5.28125 2.62911C5.11458 2.82629 5.03125 3.12207 5.03125 3.51643V5.12676H7.40625L7.09375 7.62441H5.03125V14Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="socials__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.2529 9.42723C12.2529 8.87637 12.153 8.47574 11.9532 8.22535C11.7533 7.94992 11.3786 7.81221 10.829 7.81221C10.1546 7.81221 9.67994 8.01252 9.40515 8.41315C9.13037 8.81377 8.99297 9.37715 8.99297 10.1033V15.5869C8.99297 15.7121 8.9555 15.8122 8.88056 15.8873C8.80562 15.9624 8.7057 16 8.5808 16H5.73302C5.6331 16 5.53318 15.9624 5.43326 15.8873C5.35831 15.8122 5.32084 15.7121 5.32084 15.5869V5.44601C5.32084 5.34585 5.35831 5.25822 5.43326 5.1831C5.53318 5.08294 5.6331 5.03286 5.73302 5.03286H8.50585C8.60578 5.03286 8.68072 5.0579 8.73068 5.10798C8.80562 5.15806 8.85558 5.23318 8.88056 5.33333C8.88056 5.43349 8.88056 5.49609 8.88056 5.52113C8.90554 5.57121 8.91803 5.65884 8.91803 5.78404C9.61749 5.10798 10.5667 4.76995 11.7658 4.76995C13.0898 4.76995 14.1265 5.10798 14.8759 5.78404C15.6253 6.46009 16 7.44914 16 8.75117V15.5869C16 15.7121 15.95 15.8122 15.8501 15.8873C15.7752 15.9624 15.6877 16 15.5878 16H12.6651C12.5652 16 12.4653 15.9624 12.3653 15.8873C12.2904 15.8122 12.2529 15.7121 12.2529 15.5869V9.42723ZM3.85948 1.95305C3.85948 2.47887 3.67213 2.9421 3.29742 3.34272C2.92272 3.71831 2.46058 3.9061 1.91101 3.9061C1.38642 3.9061 0.936768 3.71831 0.562061 3.34272C0.187354 2.9421 0 2.47887 0 1.95305C0 1.40219 0.187354 0.938967 0.562061 0.56338C0.936768 0.187793 1.38642 0 1.91101 0C2.46058 0 2.92272 0.187793 3.29742 0.56338C3.67213 0.938967 3.85948 1.40219 3.85948 1.95305ZM3.78454 5.44601V15.5869C3.78454 15.7121 3.73458 15.8122 3.63466 15.8873C3.55972 15.9624 3.47229 16 3.37237 16H0.52459C0.399688 16 0.299766 15.9624 0.224824 15.8873C0.149883 15.8122 0.112412 15.7121 0.112412 15.5869V5.44601C0.112412 5.34585 0.149883 5.25822 0.224824 5.1831C0.299766 5.08294 0.399688 5.03286 0.52459 5.03286H3.37237C3.47229 5.03286 3.55972 5.08294 3.63466 5.1831C3.73458 5.25822 3.78454 5.34585 3.78454 5.44601Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="socials__item">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.56 8C10.56 8.50632 10.4099 9.00127 10.1286 9.42226C9.84727 9.84325 9.44745 10.1714 8.97967 10.3651C8.51189 10.5589 7.99716 10.6096 7.50057 10.5108C7.00398 10.412 6.54783 10.1682 6.18981 9.81019C5.83178 9.45217 5.58797 8.99602 5.48919 8.49943C5.39041 8.00284 5.44111 7.48811 5.63487 7.02033C5.82863 6.55255 6.15675 6.15273 6.57774 5.87144C6.99873 5.59014 7.49368 5.44 8 5.44C8.67872 5.44078 9.32941 5.71074 9.80934 6.19066C10.2893 6.67059 10.5592 7.32128 10.56 8ZM16 4.48V11.52C15.9987 12.7078 15.5262 13.8465 14.6864 14.6864C13.8465 15.5262 12.7078 15.9987 11.52 16H4.48C3.29224 15.9987 2.15352 15.5262 1.31365 14.6864C0.473776 13.8465 0.00134518 12.7078 0 11.52V4.48C0.00134518 3.29224 0.473776 2.15352 1.31365 1.31365C2.15352 0.473776 3.29224 0.00134518 4.48 0H11.52C12.7078 0.00134518 13.8465 0.473776 14.6864 1.31365C15.5262 2.15352 15.9987 3.29224 16 4.48ZM11.84 8C11.84 7.24052 11.6148 6.49809 11.1928 5.86661C10.7709 5.23513 10.1712 4.74294 9.4695 4.4523C8.76784 4.16166 7.99574 4.08562 7.25085 4.23378C6.50597 4.38195 5.82174 4.74768 5.28471 5.28471C4.74768 5.82174 4.38195 6.50597 4.23378 7.25085C4.08562 7.99574 4.16166 8.76784 4.4523 9.4695C4.74294 10.1712 5.23513 10.7709 5.86661 11.1928C6.49809 11.6148 7.24052 11.84 8 11.84C9.01808 11.8388 9.99413 11.4339 10.714 10.714C11.4339 9.99413 11.8388 9.01808 11.84 8ZM13.12 3.84C13.12 3.65013 13.0637 3.46452 12.9582 3.30665C12.8527 3.14878 12.7028 3.02574 12.5274 2.95308C12.352 2.88042 12.1589 2.8614 11.9727 2.89845C11.7865 2.93549 11.6154 3.02692 11.4812 3.16118C11.3469 3.29544 11.2555 3.46649 11.2184 3.65271C11.1814 3.83893 11.2004 4.03196 11.2731 4.20738C11.3457 4.38279 11.4688 4.53272 11.6267 4.63821C11.7845 4.7437 11.9701 4.8 12.16 4.8C12.4146 4.8 12.6588 4.69886 12.8388 4.51882C13.0189 4.33879 13.12 4.09461 13.12 3.84Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+                <div class="socials__item">
+                    <svg width="16" height="13" viewBox="0 0 16 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.6374 1.50029C15.386 1.61093 15.1276 1.7043 14.8635 1.78011C15.1762 1.42925 15.4145 1.01641 15.56 0.564652C15.5926 0.463389 15.5588 0.352549 15.475 0.286321C15.3912 0.220042 15.2748 0.212103 15.1826 0.266345C14.6218 0.596408 14.0168 0.833609 13.3824 0.972314C12.7434 0.352651 11.8755 0 10.9782 0C9.08432 0 7.54347 1.52908 7.54347 3.40855C7.54347 3.55658 7.55292 3.70379 7.5716 3.84894C5.22141 3.64416 3.03649 2.49781 1.53611 0.671343C1.48264 0.606242 1.40026 0.571157 1.31593 0.577867C1.23154 0.584423 1.15572 0.631648 1.11309 0.704227C0.808782 1.22242 0.647906 1.81509 0.647906 2.41811C0.647906 3.23942 0.943389 4.01869 1.46535 4.62759C1.30664 4.57304 1.15263 4.50487 1.00563 4.42389C0.926718 4.3803 0.830408 4.38097 0.752008 4.42558C0.673557 4.47019 0.62437 4.55225 0.622306 4.64193C0.621944 4.65704 0.621944 4.67215 0.621944 4.68747C0.621944 5.91343 1.28682 7.01717 2.30333 7.61875C2.216 7.6101 2.12873 7.59755 2.04202 7.5811C1.95262 7.56415 1.8607 7.59524 1.80042 7.6629C1.74003 7.73051 1.72006 7.82476 1.74788 7.91081C2.12413 9.07658 3.09285 9.93406 4.26395 10.1955C3.29265 10.7992 2.18189 11.1155 1.01585 11.1155C0.77255 11.1155 0.527854 11.1013 0.288371 11.0731C0.169404 11.0591 0.0556495 11.1288 0.0151335 11.2411C-0.0253825 11.3534 0.0175593 11.4787 0.118772 11.543C1.61673 12.4962 3.3488 13 5.12763 13C8.6246 13 10.8122 11.3635 12.0316 9.99066C13.5521 8.27883 14.4241 6.013 14.4241 3.77421C14.4241 3.68068 14.4227 3.58624 14.4198 3.49209C15.0197 3.04356 15.5362 2.50072 15.9564 1.87681C16.0203 1.78205 16.0134 1.65682 15.9394 1.56959C15.8656 1.48231 15.7425 1.45409 15.6374 1.50029Z"
+                              fill="white"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/swiper-bundle.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+    const swiper = document.querySelector('.swiper').swiper;
+
+    // Now you can use all slider methods like
+    swiper.slideNext();
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
