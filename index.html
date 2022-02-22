@@ -7,7 +7,7 @@
     <title>Waylogy</title>
 
     <link rel="stylesheet" href="css/swiper-bundle.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
@@ -34,6 +34,12 @@
                           fill="#3F65AD"/>
                 </svg>
             </div>
+            <input class="menu-hamburger-input" type="checkbox" name="" id="">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
             <ul class="navigation">
                 <li class="navigation__item"><a href="#about">We Are</a></li>
                 <li class="navigation__item"><a href="#projects">Projects</a></li>
@@ -49,7 +55,10 @@
     <div class="container">
         <div class="wrapper-blocks">
             <div class="bring-w">
-                <svg width="449" height="319" viewBox="0 0 449 319" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg data-aos="fade-right"
+                     data-aos-delay="400"
+                     data-aos-easing="ease-in-out"
+                     width="449" height="319" viewBox="0 0 449 319" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M447.486 1.11897L447.637 0.5H447H376.486H376.09L375.999 0.885373L323.12 225.402L269.296 0.883437L269.204 0.5H268.809H181.62H181.227L181.134 0.881506L126.359 225.429L73.0004 0.884404L72.909 0.5H72.5139H2H1.36179L1.51453 1.11966L79.6516 318.12L79.7453 318.5H80.137H171.138H171.539L171.626 318.109L224.974 79.4578L277.85 318.108L277.937 318.5H278.338H369.339H369.732L369.825 318.119L447.486 1.11897Z"
                           stroke="url(#paint0_linear_134_333)"/>
                     <defs>
@@ -62,17 +71,24 @@
                 </svg>
             </div>
             <div class="block-text">
-                <h1 class="title">Bring Your <br>
+                <h1 class="title"
+                    data-aos="fade-left"
+                    data-aos-delay="800"
+                    data-aos-easing="ease-in-out">Bring Your <br>
                     Ideas <br>
                     Into Reality</h1>
-                <div class="btn">Let's start</div>
+                <div class="btn"
+                     data-aos="fade-up"
+                     data-aos-delay="1200"
+                     data-aos-easing="ease-in-out">Let's start
+                </div>
             </div>
 
-            <div class="text-stroke text-stroke-vertical">Find your way</div>
+            <div class="text-stroke text-stroke-vertical">
+                Find your way with WayLogy!
+            </div>
         </div>
     </div>
-
-
 </section>
 
 <section class="block-about" id="about">
@@ -81,11 +97,19 @@
         <div class="about-bg">
             <div class="about-text-wrapper">
                 <h2 class="about-title"><span class="text-green">We</span> Are</h2>
-                <p class="about-text">You don’t get 15x faster installation by making minor tweaks. We’ve re-engineered
-                    every element of steel framing for speed, safety, and quality.</p>
-                <p class="about-text">Our software transforms your BIM into a detailed manufacturing order ready for
-                    your PO. Then we build and batch your framing into kits, which are delivered to corresponding zones
-                    on your job site. Each piece snaps into place.</p>
+                <p class="about-text"
+                   data-aos="fade-up"
+                   data-aos-offset="100"
+                   data-aos-easing="ease-in-out">WayLogy - is a Ukrainian software development company which specialises
+                    on
+                    developing cross-platform mobile applications with Flutter, backend solutions, web applications and
+                    UI/UX design and more.</p>
+                <p class="about-text"
+                   data-aos="fade-up"
+                   data-aos-offset="100"
+                   data-aos-easing="ease-in-out">We make high-quality products with a transparent and adaptive
+                    development process
+                    that allows us to develop each product as efficiently and individually as possible.</p>
             </div>
         </div>
     </div>
@@ -94,40 +118,124 @@
 <section class="projects" id="projects">
     <div class="container">
         <div class="projects-wrapper">
-            <div class="projects-title">
+            <div class="projects-title"
+                 data-aos="fade-up"
+                 data-aos-easing="ease-in-out">
                 Projects <br> we <br> <span class="text-green">Made</span>
             </div>
             <div class="projects-list">
-                <div class="project" data-aos="fade-up"
-                     data-aos-offset="200"
-                     data-aos-delay="50"
+                <!--                <div class="project" data-aos="fade-up"-->
+                <!--                     data-aos-offset="200"-->
+                <!--                     data-aos-delay="50"-->
+                <!--                     data-aos-easing="ease-in-out">-->
+                <!--                    <div class="project__type">Mobile App | <span class="text-blue">entertainment</span></div>-->
+                <!--                    <div class="project__name">Instagram</div>-->
+                <!--                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order-->
+                <!--                        ready for your PO. Then we-->
+                <!--                        build and batch your framing into kits, which are delivered to corresponding zones on your job-->
+                <!--                        site. Each piece snaps into place.</p>-->
+                <!--                </div>-->
+                <div class="project"
+                     data-aos="fade-left"
+                     data-aos-delay="1000"
                      data-aos-easing="ease-in-out">
-                    <div class="project__type">Mobile App | <span class="text-blue">entertainment</span></div>
-                    <div class="project__name">Instagram</div>
-                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order
-                        ready for your PO. Then we
-                        build and batch your framing into kits, which are delivered to corresponding zones on your job
-                        site. Each piece snaps into place.</p>
+                    <div class="project__type">Mobile App | <span class="text-blue">business</span></div>
+                    <div class="project__name">Wolfie Deals</div>
+                    <p class="project__description">As part of Wolfie, you are a part of the family that includes
+                        thousands of businesses across the country. You have joined the hyper-local marketing revolution
+                        that is sweeping the nation!</p>
+                    <p class="project__description">But what does that mean to your business specifically? Simply put,
+                        you will find new local
+                        customers, the ones that search for your exact product / service, connecting you with them
+                        instantly and free! There is simply no better formula for profitable local marketing with no
+                        upfront expenses!</p>
+                    <p class="project__description"> Wolfie customers look for businesses that match their specific
+                        interest and location. They want
+                        a good deal at that precise place & time, and you are finally able to present that good deal to
+                        them just when they are looking for it!</p>
+                    <p class="project__description"> Wolfie connects your business with your potential customers on a
+                        real-time basis. Enjoy the experience!</p>
+                    <div class="download-links">
+                        <a class="app-store" href="https://apps.apple.com/us/app/wolfie-deals/id1591049383"
+                           target="_blank">
+                            <img class="app-store-image" src="./img/apple-ios-app-store-logo.png" alt="AppStore">
+                        </a>
+                        <a href="https://play.google.com/store/apps/details?id=com.progy.Wolfie&hl=uk&gl=US"
+                           target="_blank">
+                            <svg xmlns="http://www.w3.org/2000/svg" height="50" width="45" id="svg60" version="1.1"
+                                 viewBox="-4.12599 -7.65905 35.75858 45.9543">
+                                <defs id="defs38">
+                                    <linearGradient gradientUnits="userSpaceOnUse" y2="21.86" x2="-5.9" y1="1.87"
+                                                    x1="14.09" id="linear-gradient">
+                                        <stop id="stop4" stop-color="#008eff" offset="0"/>
+                                        <stop id="stop6" stop-color="#008fff" offset=".01"/>
+                                        <stop id="stop8" stop-color="#00acff" offset=".26"/>
+                                        <stop id="stop10" stop-color="#00c0ff" offset=".51"/>
+                                        <stop id="stop12" stop-color="#00cdff" offset=".76"/>
+                                        <stop id="stop14" stop-color="#00d1ff" offset="1"/>
+                                    </linearGradient>
+                                    <linearGradient gradientUnits="userSpaceOnUse" y2="15.32" x2="-2.37" y1="15.32"
+                                                    x1="26.45" id="linear-gradient-2">
+                                        <stop id="stop17" stop-color="#ffd800" offset="0"/>
+                                        <stop id="stop19" stop-color="#ff8a00" offset="1"/>
+                                    </linearGradient>
+                                    <linearGradient gradientUnits="userSpaceOnUse" y2="45.15" x2="-9.41" y1="18.05"
+                                                    x1="17.69" id="linear-gradient-3">
+                                        <stop id="stop22" stop-color="#ff3a44" offset="0"/>
+                                        <stop id="stop24" stop-color="#b11162" offset="1"/>
+                                    </linearGradient>
+                                    <linearGradient gradientUnits="userSpaceOnUse" y2="3.81" x2="8.92" y1="-8.29"
+                                                    x1="-3.19" id="linear-gradient-4">
+                                        <stop id="stop27" stop-color="#328e71" offset="0"/>
+                                        <stop id="stop29" stop-color="#2d9571" offset=".07"/>
+                                        <stop id="stop31" stop-color="#15bd74" offset=".48"/>
+                                        <stop id="stop33" stop-color="#06d575" offset=".8"/>
+                                        <stop id="stop35" stop-color="#00de76" offset="1"/>
+                                    </linearGradient>
+                                    <style id="style2">.cls-7 {
+                                        opacity: .07
+                                    }</style>
+                                </defs>
+                                <g transform="translate(.004)" id="g58">
+                                    <g id="g56">
+                                        <path id="path40"
+                                              d="M.55.48A2.39 2.39 0 000 2.15v26.34a2.41 2.41 0 00.55 1.67l.09.09 14.75-14.76v-.35L.64.39z"
+                                              fill="url(#linear-gradient)"/>
+                                        <path id="path42"
+                                              d="M20.31 20.41l-4.92-4.92v-.35l4.92-4.91.11.06 5.83 3.31c1.67.94 1.67 2.49 0 3.44l-5.83 3.31z"
+                                              fill="url(#linear-gradient-2)"/>
+                                        <path id="path44" d="M20.42 20.35l-5-5L.55 30.16a2 2 0 002.45.07l17.39-9.88"
+                                              fill="url(#linear-gradient-3)"/>
+                                        <path id="path46" d="M20.42 10.29L3 .4A1.93 1.93 0 00.55.48l14.84 14.84z"
+                                              fill="url(#linear-gradient-4)"/>
+                                        <path id="path48"
+                                              d="M20.31 20.24L3 30.06a2 2 0 01-2.39 0l-.09.09.09.09a2 2 0 002.39 0l17.39-9.88z"
+                                              opacity=".1"/>
+                                        <path id="path50"
+                                              d="M.55 30A2.43 2.43 0 010 28.32v.17a2.41 2.41 0 00.55 1.67l.09-.09z"
+                                              class="cls-7"/>
+                                        <path id="path52"
+                                              d="M26.25 16.86l-5.94 3.38.11.11L26.25 17a2.11 2.11 0 001.25-1.72 2.21 2.21 0 01-1.25 1.58z"
+                                              class="cls-7"/>
+                                        <path id="path54"
+                                              d="M3 .58l23.25 13.19a2.2 2.2 0 011.25 1.55 2.09 2.09 0 00-1.25-1.72L3 .4C1.36-.54 0 .24 0 2.15v.17C0 .42 1.36-.37 3 .58z"
+                                              fill="#fff" opacity=".3"/>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="project" data-aos="fade-up"
-                     data-aos-offset="200"
-                     data-aos-delay="50"
-                     data-aos-easing="ease-in-out">
-                    <div class="project__type">Mobile App | <span class="text-blue">finance</span></div>
-                    <div class="project__name">Rocket</div>
-                    <p class="project__description">You don’t get 15x faster installation by making minor tweaks. We’ve
-                        re-engineered every element of steel framing for speed, safety, and quality.</p>
-                </div>
-                <div class="project" data-aos="fade-up"
-                     data-aos-offset="100"
-                     data-aos-delay="50"
-                     data-aos-easing="ease-in-out">
-                    <div class="project__type">Mobile App | <span class="text-blue">trading</span></div>
-                    <div class="project__name">LTD App</div>
-                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order
-                        ready for your PO. Then we build and batch your framing into kits, which are delivered to
-                        corresponding zones on your job site. Each piece snaps into place.</p>
-                </div>
+                <!--                <div class="project" data-aos="fade-up"-->
+                <!--                     data-aos-offset="100"-->
+                <!--                     data-aos-delay="50"-->
+                <!--                     data-aos-easing="ease-in-out">-->
+                <!--                    <div class="project__type">Mobile App | <span class="text-blue">trading</span></div>-->
+                <!--                    <div class="project__name">LTD App</div>-->
+                <!--                    <p class="project__description">Our software transforms your BIM into a detailed manufacturing order-->
+                <!--                        ready for your PO. Then we build and batch your framing into kits, which are delivered to-->
+                <!--                        corresponding zones on your job site. Each piece snaps into place.</p>-->
+                <!--                </div>-->
                 <div class="btn-view-more">View more</div>
             </div>
             <div class="arrows-top">
@@ -146,7 +254,10 @@
     <div class="container">
         <h3 class="title">Testimonials</h3>
 
-        <div class="custom-swiper">
+        <div class="custom-swiper"
+             data-aos="fade-left"
+             data-aos-delay="1000"
+             data-aos-easing="ease-in-out">
             <div class="custom-swiper-wrapper">
                 <!-- If we need navigation buttons -->
                 <div class="swiper-button-custom-prev">
@@ -263,37 +374,52 @@
     <div class="container">
         <div class="top">
             <h3 class="title">Meet our <span class="text-blue">team</span></h3>
-            <div class="text-stroke">we’ll make your product <br> awesome together</div>
+            <div class="text-stroke"
+                 data-aos="fade-left"
+                 data-aos-delay="100">we’ll make your product <br> awesome together
+            </div>
         </div>
         <div class="team">
-            <div class="team__block">
+            <div class="team__block"
+                 data-aos="fade-left"
+                 data-aos-delay="500">
                 <div class="team__item">
                     <div class="circle"></div>
-                    <img class="team-image" src="./img/team-item-1.jpg" alt="Team">
+                    <img class="team-image" src="./img/JackHeorhiian.jpg" alt="Jack Heorhiian">
                 </div>
-                <div class="team__info">
+                <div class="team__info"
+                     data-aos="fade-left"
+                     data-aos-delay="800">
                     <p class="team__info__name">Jack Heorhiian</p>
+                    <p class="team__info__position">CEO</p>
+                </div>
+            </div>
+            <div class="team__block"
+                 data-aos="fade-left"
+                 data-aos-delay="1200">
+                <div class="team__item">
+                    <div class="circle"></div>
+                    <img class="team-image" src="./img/team-item-2.jpg" alt="Rostyslav Hetmaniuk">
+                </div>
+                <div class="team__info"
+                     data-aos="fade-left"
+                     data-aos-delay="1500">
+                    <p class="team__info__name">Rostyslav Hetmaniuk</p>
                     <p class="team__info__position">CTO</p>
                 </div>
             </div>
-            <div class="team__block">
+            <div class="team__block"
+                 data-aos="fade-left"
+                 data-aos-delay="2000">
                 <div class="team__item">
                     <div class="circle"></div>
-                    <img class="team-image" src="./img/team-item-2.jpg" alt="Team">
+                    <img class="team-image" src="./img/SergiyPalagniuk.jpg" alt="Sergiy Palagniuk">
                 </div>
-                <div class="team__info">
-                    <p class="team__info__name">Rostyslav Hetmaniuk</p>
-                    <p class="team__info__position">development manager</p>
-                </div>
-            </div>
-            <div class="team__block">
-                <div class="team__item">
-                    <div class="circle"></div>
-                    <img class="team-image" src="./img/team-item-3.jpg" alt="Team">
-                </div>
-                <div class="team__info">
+                <div class="team__info"
+                     data-aos="fade-left"
+                     data-aos-delay="2300">
                     <p class="team__info__name">Sergiy Palagniuk</p>
-                    <p class="team__info__position">Project manager</p>
+                    <p class="team__info__position">Sales Manager</p>
                 </div>
             </div>
         </div>
@@ -306,25 +432,43 @@
 
 <section class="form" id="contactUs">
     <div class="container">
-        <div class="form-content">
-            <h3 class="form-title">We're waiting for you</h3>
+        <div class="form-content"
+             data-aos="fade-up"
+             data-aos-delay="400"
+             data-aos-duration="2">
+            <div class="form-inside-content">
+                <h3 class="form-title">We're waiting for you</h3>
 
-            <form class="form-wrapper">
-                <div class="form-group">
-                    <label for="username">Name</label>
-                    <input type="text" id="username" name="username" required="required"/>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" required="required"/>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" required="required"></textarea>
-                </div>
+                <form class="form-wrapper" id="form">
 
-                <button class="btn btn-form">Let's start</button>
-            </form>
+                    <div class="form-group">
+                        <label for="username">Name</label>
+                        <input type="text" id="username" name="username"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email"/>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message"></textarea>
+                    </div>
+
+                    <button class="btn btn-form">
+                        <span class="btn-form-submit">Let's start</span>
+                        <span class="btn-form-loading">
+                            <svg viewBox="0 0 512 512" width="100" title="sync-alt">
+                                <path d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"/>
+                            </svg>
+                        </span>
+                        <span class="btn-form-check">
+                            <svg viewBox="0 0 512 512" width="100" title="check">
+                                <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/>
+                            </svg>
+                        </span>
+                    </button>
+                </form>
+            </div>
         </div>
         <div class="arrows-top">
             <img src="./img/arrows.png" alt="arrows">
@@ -335,35 +479,38 @@
 <footer class="footer">
     <div class="container">
         <div class="wrapper">
-            <div class="logo">
-                <a href="#">
-                    <svg width="100" height="18" viewBox="0 0 100 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.36514 4.77064L7.62497 16.8215C7.57283 17.0952 7.4099 17.2256 7.14268 17.2256H2.68471C2.41098 17.2256 2.25456 17.0887 2.20242 16.8215L0.0125404 0.710237C-0.0395995 0.436502 0.0711979 0.306152 0.338415 0.306152H3.50592C3.77965 0.306152 3.93607 0.44302 3.98169 0.710237L5.46116 13.5953L7.15571 0.710237C7.20134 0.436502 7.35776 0.306152 7.63149 0.306152H11.1053C11.379 0.306152 11.5355 0.44302 11.5811 0.710237L13.2756 13.5953L14.7551 0.710237C14.8007 0.436502 14.9572 0.306152 15.2309 0.306152H18.3984C18.6721 0.306152 18.7764 0.44302 18.7243 0.710237L16.5344 16.8215C16.4822 17.0952 16.3193 17.2256 16.0521 17.2256H11.5941C11.3204 17.2256 11.164 17.0887 11.1118 16.8215L9.36514 4.77064Z"
-                              fill="white"/>
-                        <path d="M24.5313 13.2238L23.9578 16.8215C23.9122 17.0952 23.7558 17.2256 23.482 17.2256H20.0864C19.8127 17.2256 19.7084 17.0887 19.7605 16.8215L22.8498 0.710237C22.902 0.436502 23.0649 0.306152 23.3321 0.306152H28.7677C29.0414 0.306152 29.1979 0.44302 29.25 0.710237L32.3393 16.8215C32.3914 17.0952 32.2806 17.2256 32.0134 17.2256H28.6178C28.3441 17.2256 28.1877 17.0887 28.142 16.8215L27.5685 13.2238H24.5313ZM26.0499 3.9364L25.0397 10.1215H27.0732L26.0499 3.9364Z"
-                              fill="white"/>
-                        <path d="M41.1185 9.69134V16.8215C41.1185 17.0952 40.9882 17.2256 40.721 17.2256H37.4622C37.1885 17.2256 37.0581 17.0887 37.0581 16.8215V9.69134L31.9289 0.710237C31.7724 0.436502 31.8246 0.306152 32.0983 0.306152H35.8654C36.1392 0.306152 36.3477 0.44302 36.4976 0.710237L39.0851 5.24641L41.666 0.710237C41.8159 0.436502 42.0245 0.306152 42.2982 0.306152H46.0653C46.339 0.306152 46.3912 0.44302 46.2348 0.710237L41.1185 9.69134Z"
-                              fill="white"/>
-                        <path d="M48.7439 16.1111C48.0009 15.3681 47.6294 14.4687 47.6294 13.4128V0.710237C47.6294 0.436502 47.7467 0.306152 47.9813 0.306152H51.2857C51.5594 0.306152 51.6898 0.44302 51.6898 0.710237V13.4389C51.6898 13.7126 51.8267 13.843 52.0939 13.843H59.2957C59.5694 13.843 59.6998 13.9799 59.6998 14.2471V16.8215C59.6998 17.0952 59.5629 17.2256 59.2957 17.2256H51.4421C50.3863 17.2256 49.4869 16.8541 48.7439 16.1111Z"
-                              fill="white"/>
-                        <path d="M76.9189 17.2257C75.8631 17.2257 74.9637 16.8542 74.2207 16.1112C73.4777 15.3682 73.1062 14.4688 73.1062 13.413V4.11254C73.1062 3.0567 73.4777 2.16381 74.2207 1.4143C74.9637 0.671302 75.8631 0.299805 76.9189 0.299805H83.2474C83.5212 0.299805 83.6515 0.436672 83.6515 0.703889V3.2783C83.6515 3.55203 83.5146 3.68238 83.2474 3.68238H77.4338C77.2513 3.68238 77.1601 3.77363 77.1601 3.95612V13.5694C77.1601 13.7519 77.2513 13.8432 77.4338 13.8432H79.8127C80.0408 13.8432 80.1516 13.7519 80.1516 13.5694V8.15338C80.1516 7.87965 80.2885 7.7493 80.5557 7.7493H83.8079C84.0817 7.7493 84.212 7.88617 84.212 8.15338V16.8216C84.212 17.0954 84.0751 17.2257 83.8079 17.2257H76.9189Z"
-                              fill="white"/>
-                        <path d="M94.7963 9.69134V16.8215C94.7963 17.0952 94.666 17.2256 94.3988 17.2256H91.14C90.8663 17.2256 90.7359 17.0887 90.7359 16.8215V9.69134L85.6132 0.710237C85.4568 0.436502 85.5089 0.306152 85.7826 0.306152H89.5498C89.8235 0.306152 90.032 0.44302 90.182 0.710237L92.7629 5.24641L95.3438 0.710237C95.4937 0.436502 95.7023 0.306152 95.976 0.306152H99.7431C100.017 0.306152 100.069 0.44302 99.9126 0.710237L94.7963 9.69134Z"
-                              fill="white"/>
-                        <path d="M63.8254 16.9262L59.9149 10.0633C59.791 9.85477 59.8367 9.75049 60.0452 9.75049H62.926C63.1345 9.75049 63.2909 9.85477 63.4082 10.0633L65.2788 13.5306L67.2536 10.0633C67.4752 9.85477 67.6381 9.75049 67.8401 9.75049H70.7209C70.9294 9.75049 70.9685 9.85477 70.8512 10.0633L66.9407 16.9262"
-                              fill="#3F65AD"/>
-                        <path d="M66.8234 0L70.7339 6.86292C70.8578 7.07148 70.8121 7.17576 70.6036 7.17576H67.7228C67.5143 7.17576 67.3579 7.07148 67.2405 6.86292L65.2657 3.39561L63.2975 6.86292C63.1801 7.07148 63.0237 7.17576 62.8152 7.17576H59.9344C59.7259 7.17576 59.6868 7.07148 59.8041 6.86292L63.7146 0"
-                              fill="#3F65AD"/>
-                    </svg>
-                </a>
+            <div class="content">
+                <div class="logo">
+                    <a href="#">
+                        <svg width="100" height="18" viewBox="0 0 100 18" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.36514 4.77064L7.62497 16.8215C7.57283 17.0952 7.4099 17.2256 7.14268 17.2256H2.68471C2.41098 17.2256 2.25456 17.0887 2.20242 16.8215L0.0125404 0.710237C-0.0395995 0.436502 0.0711979 0.306152 0.338415 0.306152H3.50592C3.77965 0.306152 3.93607 0.44302 3.98169 0.710237L5.46116 13.5953L7.15571 0.710237C7.20134 0.436502 7.35776 0.306152 7.63149 0.306152H11.1053C11.379 0.306152 11.5355 0.44302 11.5811 0.710237L13.2756 13.5953L14.7551 0.710237C14.8007 0.436502 14.9572 0.306152 15.2309 0.306152H18.3984C18.6721 0.306152 18.7764 0.44302 18.7243 0.710237L16.5344 16.8215C16.4822 17.0952 16.3193 17.2256 16.0521 17.2256H11.5941C11.3204 17.2256 11.164 17.0887 11.1118 16.8215L9.36514 4.77064Z"
+                                  fill="white"/>
+                            <path d="M24.5313 13.2238L23.9578 16.8215C23.9122 17.0952 23.7558 17.2256 23.482 17.2256H20.0864C19.8127 17.2256 19.7084 17.0887 19.7605 16.8215L22.8498 0.710237C22.902 0.436502 23.0649 0.306152 23.3321 0.306152H28.7677C29.0414 0.306152 29.1979 0.44302 29.25 0.710237L32.3393 16.8215C32.3914 17.0952 32.2806 17.2256 32.0134 17.2256H28.6178C28.3441 17.2256 28.1877 17.0887 28.142 16.8215L27.5685 13.2238H24.5313ZM26.0499 3.9364L25.0397 10.1215H27.0732L26.0499 3.9364Z"
+                                  fill="white"/>
+                            <path d="M41.1185 9.69134V16.8215C41.1185 17.0952 40.9882 17.2256 40.721 17.2256H37.4622C37.1885 17.2256 37.0581 17.0887 37.0581 16.8215V9.69134L31.9289 0.710237C31.7724 0.436502 31.8246 0.306152 32.0983 0.306152H35.8654C36.1392 0.306152 36.3477 0.44302 36.4976 0.710237L39.0851 5.24641L41.666 0.710237C41.8159 0.436502 42.0245 0.306152 42.2982 0.306152H46.0653C46.339 0.306152 46.3912 0.44302 46.2348 0.710237L41.1185 9.69134Z"
+                                  fill="white"/>
+                            <path d="M48.7439 16.1111C48.0009 15.3681 47.6294 14.4687 47.6294 13.4128V0.710237C47.6294 0.436502 47.7467 0.306152 47.9813 0.306152H51.2857C51.5594 0.306152 51.6898 0.44302 51.6898 0.710237V13.4389C51.6898 13.7126 51.8267 13.843 52.0939 13.843H59.2957C59.5694 13.843 59.6998 13.9799 59.6998 14.2471V16.8215C59.6998 17.0952 59.5629 17.2256 59.2957 17.2256H51.4421C50.3863 17.2256 49.4869 16.8541 48.7439 16.1111Z"
+                                  fill="white"/>
+                            <path d="M76.9189 17.2257C75.8631 17.2257 74.9637 16.8542 74.2207 16.1112C73.4777 15.3682 73.1062 14.4688 73.1062 13.413V4.11254C73.1062 3.0567 73.4777 2.16381 74.2207 1.4143C74.9637 0.671302 75.8631 0.299805 76.9189 0.299805H83.2474C83.5212 0.299805 83.6515 0.436672 83.6515 0.703889V3.2783C83.6515 3.55203 83.5146 3.68238 83.2474 3.68238H77.4338C77.2513 3.68238 77.1601 3.77363 77.1601 3.95612V13.5694C77.1601 13.7519 77.2513 13.8432 77.4338 13.8432H79.8127C80.0408 13.8432 80.1516 13.7519 80.1516 13.5694V8.15338C80.1516 7.87965 80.2885 7.7493 80.5557 7.7493H83.8079C84.0817 7.7493 84.212 7.88617 84.212 8.15338V16.8216C84.212 17.0954 84.0751 17.2257 83.8079 17.2257H76.9189Z"
+                                  fill="white"/>
+                            <path d="M94.7963 9.69134V16.8215C94.7963 17.0952 94.666 17.2256 94.3988 17.2256H91.14C90.8663 17.2256 90.7359 17.0887 90.7359 16.8215V9.69134L85.6132 0.710237C85.4568 0.436502 85.5089 0.306152 85.7826 0.306152H89.5498C89.8235 0.306152 90.032 0.44302 90.182 0.710237L92.7629 5.24641L95.3438 0.710237C95.4937 0.436502 95.7023 0.306152 95.976 0.306152H99.7431C100.017 0.306152 100.069 0.44302 99.9126 0.710237L94.7963 9.69134Z"
+                                  fill="white"/>
+                            <path d="M63.8254 16.9262L59.9149 10.0633C59.791 9.85477 59.8367 9.75049 60.0452 9.75049H62.926C63.1345 9.75049 63.2909 9.85477 63.4082 10.0633L65.2788 13.5306L67.2536 10.0633C67.4752 9.85477 67.6381 9.75049 67.8401 9.75049H70.7209C70.9294 9.75049 70.9685 9.85477 70.8512 10.0633L66.9407 16.9262"
+                                  fill="#3F65AD"/>
+                            <path d="M66.8234 0L70.7339 6.86292C70.8578 7.07148 70.8121 7.17576 70.6036 7.17576H67.7228C67.5143 7.17576 67.3579 7.07148 67.2405 6.86292L65.2657 3.39561L63.2975 6.86292C63.1801 7.07148 63.0237 7.17576 62.8152 7.17576H59.9344C59.7259 7.17576 59.6868 7.07148 59.8041 6.86292L63.7146 0"
+                                  fill="#3F65AD"/>
+                        </svg>
+                    </a>
+                </div>
+                <ul class="navigation">
+                    <li class="navigation__item"><a href="#about">We Are</a></li>
+                    <li class="navigation__item"><a href="#projects">Projects</a></li>
+                    <li class="navigation__item"><a href="#testimonials">Testimonials</a></li>
+                    <li class="navigation__item"><a href="#team">Team</a></li>
+                    <li class="navigation__item"><a href="#contactUs">Contact Us</a></li>
+                </ul>
             </div>
-            <ul class="navigation">
-                <li class="navigation__item"><a href="#about">We Are</a></li>
-                <li class="navigation__item"><a href="#projects">Projects</a></li>
-                <li class="navigation__item"><a href="#testimonials">Testimonials</a></li>
-                <li class="navigation__item"><a href="#team">Team</a></li>
-                <li class="navigation__item"><a href="#contactUs">Contact Us</a></li>
-            </ul>
             <div class="socials">
                 <div class="socials__item">
                     <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -372,10 +519,12 @@
                     </svg>
                 </div>
                 <div class="socials__item">
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M12.2529 9.42723C12.2529 8.87637 12.153 8.47574 11.9532 8.22535C11.7533 7.94992 11.3786 7.81221 10.829 7.81221C10.1546 7.81221 9.67994 8.01252 9.40515 8.41315C9.13037 8.81377 8.99297 9.37715 8.99297 10.1033V15.5869C8.99297 15.7121 8.9555 15.8122 8.88056 15.8873C8.80562 15.9624 8.7057 16 8.5808 16H5.73302C5.6331 16 5.53318 15.9624 5.43326 15.8873C5.35831 15.8122 5.32084 15.7121 5.32084 15.5869V5.44601C5.32084 5.34585 5.35831 5.25822 5.43326 5.1831C5.53318 5.08294 5.6331 5.03286 5.73302 5.03286H8.50585C8.60578 5.03286 8.68072 5.0579 8.73068 5.10798C8.80562 5.15806 8.85558 5.23318 8.88056 5.33333C8.88056 5.43349 8.88056 5.49609 8.88056 5.52113C8.90554 5.57121 8.91803 5.65884 8.91803 5.78404C9.61749 5.10798 10.5667 4.76995 11.7658 4.76995C13.0898 4.76995 14.1265 5.10798 14.8759 5.78404C15.6253 6.46009 16 7.44914 16 8.75117V15.5869C16 15.7121 15.95 15.8122 15.8501 15.8873C15.7752 15.9624 15.6877 16 15.5878 16H12.6651C12.5652 16 12.4653 15.9624 12.3653 15.8873C12.2904 15.8122 12.2529 15.7121 12.2529 15.5869V9.42723ZM3.85948 1.95305C3.85948 2.47887 3.67213 2.9421 3.29742 3.34272C2.92272 3.71831 2.46058 3.9061 1.91101 3.9061C1.38642 3.9061 0.936768 3.71831 0.562061 3.34272C0.187354 2.9421 0 2.47887 0 1.95305C0 1.40219 0.187354 0.938967 0.562061 0.56338C0.936768 0.187793 1.38642 0 1.91101 0C2.46058 0 2.92272 0.187793 3.29742 0.56338C3.67213 0.938967 3.85948 1.40219 3.85948 1.95305ZM3.78454 5.44601V15.5869C3.78454 15.7121 3.73458 15.8122 3.63466 15.8873C3.55972 15.9624 3.47229 16 3.37237 16H0.52459C0.399688 16 0.299766 15.9624 0.224824 15.8873C0.149883 15.8122 0.112412 15.7121 0.112412 15.5869V5.44601C0.112412 5.34585 0.149883 5.25822 0.224824 5.1831C0.299766 5.08294 0.399688 5.03286 0.52459 5.03286H3.37237C3.47229 5.03286 3.55972 5.08294 3.63466 5.1831C3.73458 5.25822 3.78454 5.34585 3.78454 5.44601Z"
-                              fill="white"/>
-                    </svg>
+                    <a href="https://www.linkedin.com/company/waylogy" target="_blank">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12.2529 9.42723C12.2529 8.87637 12.153 8.47574 11.9532 8.22535C11.7533 7.94992 11.3786 7.81221 10.829 7.81221C10.1546 7.81221 9.67994 8.01252 9.40515 8.41315C9.13037 8.81377 8.99297 9.37715 8.99297 10.1033V15.5869C8.99297 15.7121 8.9555 15.8122 8.88056 15.8873C8.80562 15.9624 8.7057 16 8.5808 16H5.73302C5.6331 16 5.53318 15.9624 5.43326 15.8873C5.35831 15.8122 5.32084 15.7121 5.32084 15.5869V5.44601C5.32084 5.34585 5.35831 5.25822 5.43326 5.1831C5.53318 5.08294 5.6331 5.03286 5.73302 5.03286H8.50585C8.60578 5.03286 8.68072 5.0579 8.73068 5.10798C8.80562 5.15806 8.85558 5.23318 8.88056 5.33333C8.88056 5.43349 8.88056 5.49609 8.88056 5.52113C8.90554 5.57121 8.91803 5.65884 8.91803 5.78404C9.61749 5.10798 10.5667 4.76995 11.7658 4.76995C13.0898 4.76995 14.1265 5.10798 14.8759 5.78404C15.6253 6.46009 16 7.44914 16 8.75117V15.5869C16 15.7121 15.95 15.8122 15.8501 15.8873C15.7752 15.9624 15.6877 16 15.5878 16H12.6651C12.5652 16 12.4653 15.9624 12.3653 15.8873C12.2904 15.8122 12.2529 15.7121 12.2529 15.5869V9.42723ZM3.85948 1.95305C3.85948 2.47887 3.67213 2.9421 3.29742 3.34272C2.92272 3.71831 2.46058 3.9061 1.91101 3.9061C1.38642 3.9061 0.936768 3.71831 0.562061 3.34272C0.187354 2.9421 0 2.47887 0 1.95305C0 1.40219 0.187354 0.938967 0.562061 0.56338C0.936768 0.187793 1.38642 0 1.91101 0C2.46058 0 2.92272 0.187793 3.29742 0.56338C3.67213 0.938967 3.85948 1.40219 3.85948 1.95305ZM3.78454 5.44601V15.5869C3.78454 15.7121 3.73458 15.8122 3.63466 15.8873C3.55972 15.9624 3.47229 16 3.37237 16H0.52459C0.399688 16 0.299766 15.9624 0.224824 15.8873C0.149883 15.8122 0.112412 15.7121 0.112412 15.5869V5.44601C0.112412 5.34585 0.149883 5.25822 0.224824 5.1831C0.299766 5.08294 0.399688 5.03286 0.52459 5.03286H3.37237C3.47229 5.03286 3.55972 5.08294 3.63466 5.1831C3.73458 5.25822 3.78454 5.34585 3.78454 5.44601Z"
+                                  fill="white"/>
+                        </svg>
+                    </a>
                 </div>
                 <div class="socials__item">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -399,20 +548,8 @@
 <script src="js/main.js"></script>
 
 <script>
-    const swiper = document.querySelector('.swiper').swiper;
 
-    // Now you can use all slider methods like
-    swiper.slideNext();
 
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
 </script>
 </body>
 </html>

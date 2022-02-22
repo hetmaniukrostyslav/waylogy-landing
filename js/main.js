@@ -9,6 +9,10 @@ const swiper = new Swiper(".swiper", {
     }
 });
 
+const swiperD = document.querySelector('.swiper').swiper;
+
+swiperD.slideNext();
+
 AOS.init({
     // Global settings:
     disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -31,5 +35,60 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
 });
+const inputCheckboxMenu = document.querySelector('.menu-hamburger-input');
+
+const nav = document.querySelector('.navigation');
+
+nav.addEventListener('click', e => {
+    if (e.target.parentNode.classList.contains('navigation__item')) {
+        inputCheckboxMenu.checked = false;
+    }
+})
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
+
+const button = document.querySelector('.btn-form');
+const submit = document.querySelector('.btn-form-submit');
+const form = document.querySelector('#form');
+const formInputName = document.querySelector('#username');
+const formInputEmail = document.querySelector('#email');
+
+function toggleClass() {
+    this.classList.toggle('active');
+}
+
+function addClass() {
+    this.classList.add('finished');
+    setTimeout(() => {
+        this.classList.remove('finished');
+    }, 1500);
+}
+
+button.addEventListener('click', toggleClass);
+button.addEventListener('transitionend', toggleClass);
+button.addEventListener('transitionend', addClass);
 
 
+function checkForm(form) {
+    const inputs = form.getElementsByTagName('input');
+    for (let i = 0; i < inputs.length; i++) {
+        if(inputs[i].hasAttribute("required")){
+            if(inputs[i].value === ""){
+                return false;
+            }
+        }
+    }
+    return true;
+}
+
+function submitForm(form) {
+    console.log('form', checkForm(form));
+}
