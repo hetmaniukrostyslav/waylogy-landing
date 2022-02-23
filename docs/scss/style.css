@@ -251,11 +251,20 @@ body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden; }
 
-.h2 {
-  background-color: red; }
+.general-wrapper {
+  overflow-x: hidden; }
 
 p {
   margin: 0 0 10px; }
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background: transparent !important; }
+
+input:autofill {
+  background-color: red !important;
+  background-image: none !important;
+  color: black !important; }
 
 .text-green {
   color: #22DDB3; }
@@ -500,14 +509,16 @@ p {
   .projects .arrows-top {
     position: absolute;
     top: -240px;
-    left: -115px; }
+    left: -115px;
+    user-select: none; }
     .projects .arrows-top .arrow-first {
       position: relative;
       left: 70px; }
   .projects .arrows-center {
     position: absolute;
     top: 24%;
-    left: 23%; }
+    left: 23%;
+    user-select: none; }
     .projects .arrows-center .arrow-first {
       position: relative;
       left: 80px; }
@@ -518,7 +529,8 @@ p {
     .projects .download-links .app-store {
       margin-right: 10px; }
       .projects .download-links .app-store-image {
-        width: 38px; }
+        width: 38px;
+        user-select: none; }
 
 .testimonials {
   background: linear-gradient(268.72deg, #010714 16.07%, #000713 97.45%);
@@ -573,7 +585,8 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    outline: none; }
   .custom-swiper-wrapper .swiper-button-custom-prev {
     position: absolute;
     top: calc(50% - 45px);
@@ -590,7 +603,8 @@ p {
   height: 447px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  user-select: none; }
   .block-testimonials .comment {
     color: #fff;
     font-family: 'Roboto', sans-serif; }
@@ -601,7 +615,8 @@ p {
       width: 80px;
       height: 80px;
       border-radius: 50%;
-      object-fit: cover; }
+      object-fit: cover;
+      user-select: none; }
     .block-testimonials .testimonial-author .testimonial-author__info {
       margin-left: 30px; }
       .block-testimonials .testimonial-author .testimonial-author__info-name {
@@ -688,7 +703,8 @@ p {
     width: 160px;
     height: 160px;
     border-radius: 50%;
-    object-fit: cover; }
+    object-fit: cover;
+    user-select: none; }
   .our-team .circle {
     background: url("../img/circle-gradient.png") no-repeat center center;
     background-size: contain;
@@ -699,7 +715,8 @@ p {
     position: absolute;
     top: -300px;
     right: -170px;
-    z-index: 3; }
+    z-index: 3;
+    user-select: none; }
     .our-team .arrows-top .arrow-first {
       position: relative;
       left: 70px; }
@@ -782,8 +799,6 @@ p {
         background: transparent; }
       .form .form-group input:active {
         background: transparent; }
-      .form .form-group input:visited {
-        background: red !important; }
     .form .form-group textarea {
       outline: none;
       display: block;
@@ -866,7 +881,8 @@ p {
   .form .arrows-top {
     position: absolute;
     top: -200px;
-    left: -10px; }
+    left: -10px;
+    user-select: none; }
 
 .footer {
   padding: 30px 0;
@@ -983,7 +999,10 @@ p {
       display: flex;
       flex-direction: column;
       align-items: center;
-      margin-bottom: 60px; }
+      margin-bottom: 60px;
+      transition-delay: 0s !important; }
+    .our-team .team__info {
+      transition-delay: 0s !important; }
 
   .custom-swiper-wrapper .swiper-button-custom-next {
     right: -20px;
@@ -1250,5 +1269,41 @@ p {
     transform: scale(0.7); }
   100% {
     transform: scale(1); } }
+#loading {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background: linear-gradient(268.72deg, #010714 16.07%, #051C47 58.66%, #000713 97.45%);
+  z-index: 99; }
+
+#loading.hide {
+  display: none; }
+
+.moderspinner {
+  width: 40px;
+  height: 40px;
+  border: dotted 5px #21E1B3;
+  border-radius: 100%;
+  animation: spin 1s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg) scale(0.8);
+    border-top-color: transparent;
+    border-right-color: transparent; }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+    border-top-color: transparent;
+    border-right-color: transparent; }
+  100% {
+    transform: rotate(360deg) scale(0.8);
+    border-top-color: transparent;
+    border-right-color: transparent; } }
 
 /*# sourceMappingURL=style.css.map */

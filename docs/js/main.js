@@ -1,94 +1,76 @@
-const swiper = new Swiper(".swiper", {
-    // Optional parameters
-    loop: true,
-    spaceBetween: 50,
-    // Navigation arrows
-    navigation: {
-        nextEl: ".swiper-button-custom-next",
-        prevEl: ".swiper-button-custom-prev"
-    }
-});
-
-const swiperD = document.querySelector('.swiper').swiper;
-
-swiperD.slideNext();
-
-AOS.init({
-    // Global settings:
-    disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-    startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-    initClassName: 'aos-init', // class applied after initialization
-    animatedClassName: 'aos-animate', // class applied on animation
-    useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-    disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-    debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-    throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+document.addEventListener('DOMContentLoaded', function () {
+    const loader = document.querySelector('#loading');
+    loader.classList.add('hide');
 
 
-    // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-    offset: 120, // offset (in px) from the original trigger point
-    delay: 0, // values from 0 to 3000, with step 50ms
-    duration: 400, // values from 0 to 3000, with step 50ms
-    easing: 'ease', // default easing for AOS animations
-    once: false, // whether animation should happen only once - while scrolling down
-    mirror: false, // whether elements should animate out while scrolling past them
-    anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+    const swiper = new Swiper(".swiper", {
+        loop: true,
+        spaceBetween: 50,
+        navigation: {
+            nextEl: ".swiper-button-custom-next",
+            prevEl: ".swiper-button-custom-prev"
+        }
+    });
 
-});
-const inputCheckboxMenu = document.querySelector('.menu-hamburger-input');
+    const swiperD = document.querySelector('.swiper').swiper;
 
-const nav = document.querySelector('.navigation');
+    swiperD.slideNext();
 
-nav.addEventListener('click', e => {
-    if (e.target.parentNode.classList.contains('navigation__item')) {
-        inputCheckboxMenu.checked = false;
-    }
-})
+    AOS.init({
+        // Global settings:
+        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+        initClassName: 'aos-init', // class applied after initialization
+        animatedClassName: 'aos-animate', // class applied on animation
+        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
+        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+        offset: 50, // offset (in px) from the original trigger point
+        delay: 0, // values from 0 to 3000, with step 50ms
+        duration: 700, // values from 0 to 3000, with step 50ms
+        easing: 'ease-in-out', // default easing for AOS animations
+        once: true, // whether animation should happen only once - while scrolling down
+        mirror: false, // whether elements should animate out while scrolling past them
+        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+    });
+    const inputCheckboxMenu = document.querySelector('.menu-hamburger-input');
+
+    const nav = document.querySelector('.navigation');
+
+    nav.addEventListener('click', e => {
+        if (e.target.parentNode.classList.contains('navigation__item')) {
+            inputCheckboxMenu.checked = false;
+        }
+    })
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
         });
     });
-});
 
-const button = document.querySelector('.btn-form');
-const submit = document.querySelector('.btn-form-submit');
-const form = document.querySelector('#form');
-const formInputName = document.querySelector('#username');
-const formInputEmail = document.querySelector('#email');
+    const button = document.querySelector('.btn-form');
 
-function toggleClass() {
-    this.classList.toggle('active');
-}
-
-function addClass() {
-    this.classList.add('finished');
-    setTimeout(() => {
-        this.classList.remove('finished');
-    }, 1500);
-}
-
-button.addEventListener('click', toggleClass);
-button.addEventListener('transitionend', toggleClass);
-button.addEventListener('transitionend', addClass);
-
-
-function checkForm(form) {
-    const inputs = form.getElementsByTagName('input');
-    for (let i = 0; i < inputs.length; i++) {
-        if(inputs[i].hasAttribute("required")){
-            if(inputs[i].value === ""){
-                return false;
-            }
-        }
+    function toggleClass() {
+        this.classList.toggle('active');
     }
-    return true;
-}
 
-function submitForm(form) {
-    console.log('form', checkForm(form));
-}
+    function addClass() {
+        this.classList.add('finished');
+        setTimeout(() => {
+            this.classList.remove('finished');
+        }, 1500);
+    }
+
+    button.addEventListener('click', toggleClass);
+    button.addEventListener('transitionend', toggleClass);
+    button.addEventListener('transitionend', addClass);
+}, false);

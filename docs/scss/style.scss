@@ -66,12 +66,17 @@ body {
   overflow-x: hidden;
 }
 
-.h2 {
-  background-color: red;
+.general-wrapper {
+  overflow-x: hidden;
 }
 
 p {
   margin: 0 0 10px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  background: transparent !important;
 }
 
 .text-green {
