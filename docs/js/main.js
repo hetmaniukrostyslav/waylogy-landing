@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const loader = document.querySelector('#loading');
     loader.classList.add('hide');
 
-
     const swiper = new Swiper(".swiper", {
         loop: true,
         spaceBetween: 50,
@@ -11,9 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
             prevEl: ".swiper-button-custom-prev"
         }
     });
-
     const swiperD = document.querySelector('.swiper').swiper;
-
     swiperD.slideNext();
 
     AOS.init({
@@ -37,15 +34,6 @@ document.addEventListener('DOMContentLoaded', function () {
         anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 
     });
-    const inputCheckboxMenu = document.querySelector('.menu-hamburger-input');
-
-    const nav = document.querySelector('.navigation');
-
-    nav.addEventListener('click', e => {
-        if (e.target.parentNode.classList.contains('navigation__item')) {
-            inputCheckboxMenu.checked = false;
-        }
-    })
 
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -57,20 +45,39 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    const button = document.querySelector('.btn-form');
+    // const button = document.querySelector('.btn-form');
 
-    function toggleClass() {
-        this.classList.toggle('active');
+    function burgerMenu() {
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('.menu');
+        const body = document.querySelector('body');
+        burger.addEventListener('click', () => {
+            if (!menu.classList.contains('active')) {
+                menu.classList.add('active');
+                burger.classList.add('active-burger');
+                body.classList.add('locked');
+            } else {
+                menu.classList.remove('active');
+                burger.classList.remove('active-burger');
+                body.classList.remove('locked');
+            }
+        });
+
+        menu.addEventListener('click', (e) => {
+            if (e.target.className === 'menu__item-link') {
+                menu.classList.remove('active');
+                burger.classList.remove('active-burger');
+                body.classList.remove('locked');
+            }
+        })
+
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 767.98) {
+                menu.classList.remove('active');
+                burger.classList.remove('active-burger');
+                body.classList.remove('locked');
+            }
+        });
     }
-
-    function addClass() {
-        this.classList.add('finished');
-        setTimeout(() => {
-            this.classList.remove('finished');
-        }, 1500);
-    }
-
-    button.addEventListener('click', toggleClass);
-    button.addEventListener('transitionend', toggleClass);
-    button.addEventListener('transitionend', addClass);
+    burgerMenu();
 }, false);
