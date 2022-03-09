@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WayLogy</title>
 
-    <link rel="stylesheet" href="css/swiper-bundle.css"/>
     <link rel="stylesheet" href="css/aos.css"/>
+    <link rel="stylesheet" href="css/swiper-bundle.css"/>
     <link rel="stylesheet" href="scss/style.css">
 </head>
 <body>
@@ -41,7 +41,8 @@
                 <ul class="menu">
                     <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>We Are</a></li>
                     <li class="menu__item"><a href="#projects" class="menu__item-link" data-scroll>Projects</a></li>
-                    <li class="menu__item"><a href="#testimonials" class="menu__item-link" data-scroll>Testimonials</a></li>
+                    <li class="menu__item"><a href="#testimonials" class="menu__item-link" data-scroll>Testimonials</a>
+                    </li>
                     <li class="menu__item"><a href="#team" class="menu__item-link" data-scroll>Team</a></li>
                     <li class="menu__item"><a href="#contactUs" class="menu__item-link" data-scroll>Contact Us</a></li>
                 </ul>
@@ -81,7 +82,8 @@
                     <div class="btn"
                          data-aos="fade-up"
                          data-aos-delay="1200"
-                         data-aos-easing="ease-in-out">Let's start
+                         data-aos-easing="ease-in-out">
+                        <a href="#form">Let's start</a>
                     </div>
                 </div>
 
@@ -450,33 +452,33 @@
                 <div class="form-inside-content">
                     <h3 class="form-title">We're waiting for you</h3>
 
-                    <form class="form-wrapper" id="form">
+                    <form class="form-wrapper" id="form" method="post" autocomplete="off">
 
                         <div class="form-group">
                             <label for="username">Name</label>
-                            <input type="text" id="username" name="username"/>
+                            <input type="text" id="username" name="username" required/>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="email" id="email" name="email"/>
+                            <input type="email" id="email" name="email" required/>
                         </div>
                         <div class="form-group">
                             <label for="message">Message</label>
-                            <textarea id="message" name="message"></textarea>
+                            <textarea id="message" name="message" required></textarea>
                         </div>
 
-                        <button class="btn btn-form">
+                        <button class="btn btn-form" type="submit">
                             <span class="btn-form-submit">Let's start</span>
                             <span class="btn-form-loading">
-                            <svg viewBox="0 0 512 512" width="100" title="sync-alt">
+                                <svg viewBox="0 0 512 512" width="100" title="sync-alt">
                                 <path d="M370.72 133.28C339.458 104.008 298.888 87.962 255.848 88c-77.458.068-144.328 53.178-162.791 126.85-1.344 5.363-6.122 9.15-11.651 9.15H24.103c-7.498 0-13.194-6.807-11.807-14.176C33.933 94.924 134.813 8 256 8c66.448 0 126.791 26.136 171.315 68.685L463.03 40.97C478.149 25.851 504 36.559 504 57.941V192c0 13.255-10.745 24-24 24H345.941c-21.382 0-32.09-25.851-16.971-40.971l41.75-41.749zM32 296h134.059c21.382 0 32.09 25.851 16.971 40.971l-41.75 41.75c31.262 29.273 71.835 45.319 114.876 45.28 77.418-.07 144.315-53.144 162.787-126.849 1.344-5.363 6.122-9.15 11.651-9.15h57.304c7.498 0 13.194 6.807 11.807 14.176C478.067 417.076 377.187 504 256 504c-66.448 0-126.791-26.136-171.315-68.685L48.97 471.03C33.851 486.149 8 475.441 8 454.059V320c0-13.255 10.745-24 24-24z"/>
                             </svg>
-                        </span>
+                            </span>
                             <span class="btn-form-check">
-                            <svg viewBox="0 0 512 512" width="100" title="check">
+                                <svg viewBox="0 0 512 512" width="100" title="check">
                                 <path d="M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z"/>
                             </svg>
-                        </span>
+                            </span>
                         </button>
                     </form>
                 </div>
@@ -514,12 +516,14 @@
                             </svg>
                         </a>
                     </div>
-                    <ul class="navigation">
-                        <li class="navigation__item"><a href="#about">We Are</a></li>
-                        <li class="navigation__item"><a href="#projects">Projects</a></li>
-                        <li class="navigation__item"><a href="#testimonials">Testimonials</a></li>
-                        <li class="navigation__item"><a href="#team">Team</a></li>
-                        <li class="navigation__item"><a href="#contactUs">Contact Us</a></li>
+                    <ul class="menu">
+                        <li class="menu__item"><a href="#about" class="menu__item-link" data-scroll>We Are</a></li>
+                        <li class="menu__item"><a href="#projects" class="menu__item-link" data-scroll>Projects</a></li>
+                        <li class="menu__item"><a href="#testimonials" class="menu__item-link"
+                                                  data-scroll>Testimonials</a></li>
+                        <li class="menu__item"><a href="#team" class="menu__item-link" data-scroll>Team</a></li>
+                        <li class="menu__item"><a href="#contactUs" class="menu__item-link" data-scroll>Contact Us</a>
+                        </li>
                     </ul>
                 </div>
                 <div class="socials">
@@ -556,8 +560,8 @@
     </footer>
 </div>
 
-<script src="js/swiper-bundle.js"></script>
 <script src="js/aos.js"></script>
+<script src="js/swiper-bundle.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>

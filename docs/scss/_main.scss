@@ -614,7 +614,7 @@
   }
 
   .form-wrapper {
-    width: 360px;
+    width: 420px;
     text-align: center;
     margin: 0 auto;
   }
@@ -624,7 +624,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin: 0 0 14px;
-    width: 360px;
+    width: 420px;
 
     label {
       display: block;
@@ -669,7 +669,7 @@
       border: 1px solid #fff;
       border-radius: 4px;
       box-sizing: border-box;
-      padding: 12px 20px;
+      padding: 10px;
       color: #cccccc;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
@@ -677,7 +677,7 @@
       transition: 0.3s ease;
       background: transparent;
       resize: none;
-      height: 170px;
+      height: 200px;
 
       &:focus {
         border-color: #23DAB3;
@@ -745,6 +745,7 @@
       &:nth-of-type(1) {
         top: -100%;
         transform: translateY(-50%);
+        display: none;
       }
 
       &:nth-of-type(2) {
@@ -813,7 +814,7 @@
     flex: 1;
   }
 
-  .navigation {
+  .menu {
     flex: 4;
   }
 
@@ -1286,7 +1287,7 @@
       align-items: flex-start;
     }
 
-    .navigation {
+    .menu {
       flex-direction: column;
       margin-top: 20px;
     }
@@ -1497,9 +1498,6 @@
   }
 }
 
-// Header
-
-// Navbar
 nav {
   background-color: rgba(0, 119, 134, 0.651);
   overflow: hidden;
@@ -1517,10 +1515,5 @@ nav {
   a {
     color: white;
   }
-}
-
-// Burger menu styles
-@media screen and (max-width: 767.98px) {
-
 }
 

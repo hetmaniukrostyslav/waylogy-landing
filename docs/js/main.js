@@ -35,6 +35,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
 
+    window.addEventListener('load', AOS.refresh);
+
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
@@ -44,8 +46,6 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
-
-    // const button = document.querySelector('.btn-form');
 
     function burgerMenu() {
         const burger = document.querySelector('.burger');
@@ -79,5 +79,31 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
     burgerMenu();
+
+    function addClass() {
+        this.classList.add('finished');
+        setTimeout(() => {
+            this.classList.remove('finished');
+        }, 1500);
+    }
+
+    function toggleClass() {
+        this.classList.toggle('active');
+    }
+
+    const buttonForm = document.querySelector('.btn-form');
+    const form = document.querySelector('#form');
+
+    form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        buttonForm.classList.toggle('active');
+        buttonForm.addEventListener('transitionend', toggleClass);
+        buttonForm.addEventListener('transitionend', addClass);
+        setTimeout(() => {
+            form.reset();
+        }, 1500)
+    })
+
 }, false);
