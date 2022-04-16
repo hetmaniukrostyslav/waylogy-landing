@@ -3,12 +3,12 @@ document.addEventListener('DOMContentLoaded', function () {
     loader.classList.add('hide');
 
     const swiper = new Swiper(".swiper", {
-        loop: true,
+        loop: false,
         spaceBetween: 50,
-        navigation: {
-            nextEl: ".swiper-button-custom-next",
-            prevEl: ".swiper-button-custom-prev"
-        }
+        // navigation: {
+        //     nextEl: ".swiper-button-custom-next",
+        //     prevEl: ".swiper-button-custom-prev"
+        // }
     });
     const swiperD = document.querySelector('.swiper').swiper;
     swiperD.slideNext();
