@@ -13,40 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const swiperD = document.querySelector('.swiper').swiper;
     swiperD.slideNext();
 
-    AOS.init({
-        // Global settings:
-        disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
-        startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
-        initClassName: 'aos-init', // class applied after initialization
-        animatedClassName: 'aos-animate', // class applied on animation
-        useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
-        disableMutationObserver: false, // disables automatic mutations' detections (advanced)
-        debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
-
-
-        // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-        offset: 50, // offset (in px) from the original trigger point
-        delay: 0, // values from 0 to 3000, with step 50ms
-        duration: 700, // values from 0 to 3000, with step 50ms
-        easing: 'ease-in-out', // default easing for AOS animations
-        once: true, // whether animation should happen only once - while scrolling down
-        mirror: false, // whether elements should animate out while scrolling past them
-        anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
-
-    });
-
-    window.addEventListener('load', AOS.refresh);
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
-            });
-        });
-    });
-
     function burgerMenu() {
         const burger = document.querySelector('.burger');
         const menu = document.querySelector('.menu');
@@ -98,12 +64,78 @@ document.addEventListener('DOMContentLoaded', function () {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
+
         buttonForm.classList.toggle('active');
         buttonForm.addEventListener('transitionend', toggleClass);
-        buttonForm.addEventListener('transitionend', addClass);
-        setTimeout(() => {
-            form.reset();
-        }, 1500)
+        sendEmail();
+        // buttonForm.addEventListener('transitionend', addClass);
+        // setTimeout(() => {
+        //     form.reset();
+        // }, 1500)
     })
+
+    function sendEmail() {
+        const name = document.getElementById('username').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        console.log('name', name);
+        console.log('email', email);
+        console.log('message', message);
+        Email.send({
+            Host: "smtp.gmail.com",
+            Username: "noreply.orbislaw@gmail.com",
+            Password: "L89vPhR<,dM4fP)v",
+            To: 'info@waylogy.com',
+            From: email,
+            Subject: "Waylogy website",
+            Body: 'From: ' + name + '\n' + message,
+        })
+            .then(function (message) {
+                buttonForm.addEventListener('transitionend', addClass);
+                form.reset();
+            });
+    }
+
+    // Animation
+    const animItems = document.querySelectorAll('._anim-items');
+
+    if (animItems.length > 0) {
+        window.addEventListener('scroll', animOnScroll)
+
+        function animOnScroll() {
+            for (let index = 0; index < animItems.length; index++) {
+                const animItem = animItems[index];
+                const animItemHeight = animItem.offsetHeight;
+                const animItemOffset = offset(animItem).top;
+                const animStart = 5;
+
+                let animItemPoint = window.innerHeight - animItemHeight / animStart;
+                if (animItemHeight > window.innerHeight) {
+                    animItemPoint = window.innerHeight - window.innerHeight / animStart;
+                }
+
+                if ((window.scrollY > animItemOffset - animItemPoint) && window.scrollY < (animItemOffset + animItemHeight)) {
+                    animItem.classList.add('_active');
+                } else {
+                    if (!animItem.classList.contains('_anim-no-hide')) {
+                        animItem.classList.remove('_active');
+                    }
+                }
+            }
+        }
+
+        function offset(el) {
+            const rect = el.getBoundingClientRect(),
+                scrollLeft = document.documentElement.scrollLeft,
+                scrollTop = document.documentElement.scrollTop;
+            return {top: rect.top + scrollTop, left: rect.left + scrollLeft}
+        }
+
+        setTimeout(() => {
+            animOnScroll();
+        }, 400);
+
+    }
 
 }, false);
