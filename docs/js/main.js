@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         setTimeout(() => {
             animOnScroll();
-        }, 400);
+        }, 500);
 
     }
 

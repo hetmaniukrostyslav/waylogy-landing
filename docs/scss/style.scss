@@ -131,6 +131,11 @@ input:-webkit-autofill:focus {
 
 @import "main";
 
+.clutch-widget {
+  width: 330px;
+  margin-top: 15px;
+}
+
 // Animation on scroll
 .anim-left {
   transform: translate(200px, 0px);
@@ -168,47 +173,40 @@ input:-webkit-autofill:focus {
   transition: all 0.6s ease-in-out;
 }
 
-.team .team__block {
-  transform: translate(120%, 0px);
+.block1 {
+  //transform: translate(120%, 0px);
+  transform: scale(0);
   opacity: 0;
-  transition: all 0.4s ease-in-out 0s;
-  .team__info {
-    transform: translate(120%, 0px);
-    opacity: 0;
-    transition: all 0.4s ease-in-out 0s;
-  }
+  transition: all 0.8s ease-in-out 0.4s;
 }
 
-.team._active {
-  .team__block {
-    opacity: 1;
-    transform: translate(0px, 0px);
-    .team__info {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-  }
+.block1._active {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.8s ease-in-out 0.4s;
 }
 
-.team {
-  &._active {
-    .team__block {
-      @for $var from 1 to 4 {
-        $delay: $var * 0.4;
-        &:nth-child(#{$var}) {
-          @if $var == 1 {
-            transition: all 0.6s ease-in-out 0s;
-          } @else {
-            transition: all 0.6s ease-in-out #{$delay + s};
-          }
+.block2 {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 0.8s;
+}
 
-          .team__info {
-            $delayInfo: $var * 0.4 + 0.3;
-            transition: all 0.6s ease-in-out #{$delayInfo + s};
-          }
-        }
-      }
-    }
-  }
+.block2._active {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.8s ease-in-out 0.8s;
+}
+
+.block3 {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.8s ease-in-out 1.2s;
+}
+
+.block3._active {
+  transform: scale(1);
+  opacity: 1;
+  transition: all 0.8s ease-in-out 1.2s;
 }
 
