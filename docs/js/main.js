@@ -85,9 +85,9 @@ document.addEventListener('DOMContentLoaded', function () {
         Email.send({
             Host: "smtp.elasticemail.com",
             Username: "tech@waylogy.com",
-            Password: "E46D73F022C3DA0ACD25344CA02D0F50E29C",
+            Password: "364B701535B972DDF9B72E92556639C10684",
             To: 'info@waylogy.com',
-            From: 'noreply@waylogy.com',
+            From: 'tech@waylogy.com',
             Subject: "Waylogy website",
             Body: 'From: ' + name + '\n' + 'Email' + email +'\n' + message,
         })
