@@ -87,9 +87,9 @@ document.addEventListener('DOMContentLoaded', function () {
             Username: "noreply@waylogy.com",
             Password: "E46D73F022C3DA0ACD25344CA02D0F50E29C",
             To: 'info@waylogy.com',
-            From: email,
+            From: 'noreply@waylogy.com',
             Subject: "Waylogy website",
-            Body: 'From: ' + name + '\n' + message,
+            Body: 'From: ' + name + '\n' + 'Email' + email +'\n' + message,
         })
             .then(function (message) {
                 buttonForm.addEventListener('transitionend', addClass);
