@@ -86,8 +86,8 @@ document.addEventListener('DOMContentLoaded', function () {
             Host: "smtp.gmail.com",
             Username: "noreply.orbislaw@gmail.com",
             Password: "L89vPhR<,dM4fP)v",
-            To: 'info@waylogy.com',
-            From: "noreply.orbislaw@gmail.com",
+            To: 'noreply.orbislaw@gmail.com',
+            From: email,
             Subject: "Waylogy website",
             Body: 'From: ' + name + '\n' + email  + '\n' + message,
         })
