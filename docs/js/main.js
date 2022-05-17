@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('email', email);
         console.log('message', message);
         Email.send({
-            Host: "smtp.elasticemail.com",
-            Username: "tech@waylogy.com",
-            Password: "364B701535B972DDF9B72E92556639C10684",
+            Host: "smtp.gmail.com",
+            Username: "noreply.orbislaw@gmail.com",
+            Password: "L89vPhR<,dM4fP)v",
             To: 'info@waylogy.com',
-            From: 'tech@waylogy.com',
+            From: "noreply.orbislaw@gmail.com",
             Subject: "Waylogy website",
-            Body: 'From: ' + name + '\n' + 'Email' + email +'\n' + message,
+            Body: 'From: ' + name + '\n' + email  + '\n' + message,
         })
             .then(function (message) {
                 buttonForm.addEventListener('transitionend', addClass);
