@@ -82,15 +82,22 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('name', name);
         console.log('email', email);
         console.log('message', message);
-        Email.send({
-            Host: "smtp.gmail.com",
-            Username: "noreply.orbislaw@gmail.com",
-            Password: "L89vPhR<,dM4fP)v",
-            To: 'noreply.orbislaw@gmail.com',
-            From: email,
-            Subject: "Waylogy website",
-            Body: 'From: ' + name + '\n' + email  + '\n' + message,
-        })
+        
+        let xhr = new XMLHttpRequest();
+        xhr.open("POST", "https://waylogyapi.azurewebsites.net/api/Mail");
+
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onload = () => console.log(xhr.responseText);
+
+        let data = `{
+                      "email": email,
+                      "name": name,
+                      "content": message
+                    }`;
+
+        xhr.send(data)
             .then(function (message) {
                 buttonForm.addEventListener('transitionend', addClass);
                 form.reset();
