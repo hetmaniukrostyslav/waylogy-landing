@@ -90,18 +90,18 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.setRequestHeader("Content-Type", "application/json");
 
         xhr.onload = () => console.log(xhr.responseText);
-
         let data = `{
                       "email": email,
                       "name": name,
                       "content": message
                     }`;
 
-        xhr.send(data)
-            .then(function (message) {
-                buttonForm.addEventListener('transitionend', addClass);
-                form.reset();
-            });
+        xhr.send(data);
+        
+        //.then(function (message) {
+          //  buttonForm.addEventListener('transitionend', addClass);
+            //form.reset();
+        //})
     }
 
     // Animation
