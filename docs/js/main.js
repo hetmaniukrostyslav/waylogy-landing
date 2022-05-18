@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
         $.ajax({
           type: "POST",
           url: "https://waylogyapi.azurewebsites.net/api/Mail",
-          data: JSON.stringify({ "email": email, "name" : name, "message" : message }),
+          data: JSON.stringify({ "email": email, "name" : name, "content" : message }),
           contentType: "application/json",
           success: function (result) {
                 buttonForm.addEventListener('transitionend', addClass);
